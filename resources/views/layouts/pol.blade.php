@@ -22,7 +22,7 @@
 			<!-- Left Side Of Navbar -->
 			<ul class="nav navbar-nav">
 				
-				<li><a href="{{ route('employees.edit',['id'=>Auth::user()->id]) }}">profile</a></li>	
+				<li><a href="{{ route('employees.edit',['id'=>Auth::user()->id]) }}"><b>Profile</b></a></li>	
 				<li> <a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span id="date_time"></span>
                  <script type="text/javascript">window.onload = date_time('date_time');</script></a>
                 </li>
