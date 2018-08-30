@@ -48,7 +48,7 @@
 		
 		<div class="form-group col-lg-3">
 			<label for="role">Select a Role</label>
-			<select name="role_id"  cols="5" rows="5" class="form-control" >
+			<select name="role_id"  cols="5" rows="5" class="form-control">
 				@foreach($roles as $role)
 					<option value="{{ $role->id}}"
 						@if($employee->role->id == $role->id)

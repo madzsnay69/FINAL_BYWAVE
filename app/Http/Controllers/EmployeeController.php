@@ -170,10 +170,11 @@ class EmployeeController extends Controller
 		$user->password = $employee->password;
 		$user->role = 'employee';	
 		$user->save();
-		
-		
+
 		$request->session()->flash('status', 'New Employee created');
-		return redirect()->route('employees.index');
+		return (Auth::user()->role == "admin" ) ? redirect()->route('employees.index') : view('/userhome', [
+                    'user_employee' => $employee
+            ]);
     }
 
     /**
